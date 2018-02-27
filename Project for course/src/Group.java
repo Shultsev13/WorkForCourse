@@ -9,7 +9,6 @@ public class Group
     private String name;
     private int groupSize = 0;
 
-
     public Group()
     {
 
@@ -48,18 +47,18 @@ public class Group
         return max;
     }
 
-    public String getClassMonitor(double max)
+    public String getGroupMonitor(double max)
     {
-        String classMonitor = "";
-        for(Student i : studentList)
+        String groupMonitor = "";
+        for (Student i : studentList)
         {
-            if(i.getStudentQuality() == max)
+            if (i.getStudentQuality() == max)
             {
-                classMonitor += i;
+                groupMonitor += i;
                 break;
             }
         }
-        return classMonitor;
+        return groupMonitor;
     }
 
     public void addMember(Student student)
@@ -70,7 +69,7 @@ public class Group
     public String getStudentList()
     {
         String student = "";
-        for(Student i : studentList)
+        for (Student i : studentList)
         {
             student += i + "\n";
         }

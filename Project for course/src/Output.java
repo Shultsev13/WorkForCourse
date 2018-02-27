@@ -13,6 +13,7 @@ public class Output
     private Professor professor = new Professor();
     private Pattern pattern = Pattern.compile("[0-9]+");
     private String[] arrTemp;
+    private String stringTemp;
 
     public Output()
     {
@@ -22,13 +23,22 @@ public class Output
     public void enterGroupName()
     {
         System.out.println("Enter group name: ");
-        group.setName(scanner.nextLine());
+        stringTemp = scanner.nextLine();
+        if (stringTemp.isEmpty())
+        {
+            error();
+            enterGroupName();
+        }
+        else
+        {
+            group.setName(stringTemp);
+        }
     }
 
     public void enterGroupSize()
     {
         System.out.println("Enter group size: ");
-        String stringTemp = scanner.nextLine();
+        stringTemp = scanner.nextLine();
         Matcher matcher = pattern.matcher(String.valueOf(stringTemp));
         if (matcher.matches())
         {
@@ -82,7 +92,7 @@ public class Output
         if (intTemp == 1)
         {
             System.out.println("Group: " + group.getName());
-            System.out.println("The class monitor is: " + group.getClassMonitor(group.getMaxQuality()));
+            System.out.println("The class monitor is: " + group.getGroupMonitor(group.getMaxQuality()));
             mainMenu();
         }
         else if (intTemp == 2)

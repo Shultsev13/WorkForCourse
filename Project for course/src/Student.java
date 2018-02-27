@@ -9,11 +9,11 @@ public class Student
     private double studentQuality;
     private boolean present = true;
 
-
     public Student()
     {
 
     }
+
     public Student(String name, String surname)
     {
         this.name = name;
@@ -28,12 +28,12 @@ public class Student
         return studentID;
     }
 
-    private String getName()
+    public String getName()
     {
         return name;
     }
 
-    private String getSurname()
+    public String getSurname()
     {
         return surname;
     }
@@ -43,7 +43,7 @@ public class Student
         return studentQuality;
     }
 
-    private boolean isPresent()
+    public boolean isPresent()
     {
         return present;
     }
@@ -51,8 +51,7 @@ public class Student
     @Override
     public String toString()
     {
-        return this.getStudentID() + ". " + this.getName() + " " + this.getSurname() + ". Is Present: " + this.isPresent();
+        return this.getStudentID() + ". " + this.getName() + " " + this.getSurname() + ". Is Present: " +
+                this.isPresent();
     }
-
-
 }
