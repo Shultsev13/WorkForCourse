@@ -7,7 +7,6 @@ import java.util.regex.Pattern;
  */
 public class Output
 {
-    //private Output output = new Output();
     private Scanner scanner = new Scanner(System.in);
     private Student student = new Student();
     private Group group = new Group();
@@ -103,7 +102,6 @@ public class Output
             mainMenu();
         }
     }
-
 
     private void error()
     {
