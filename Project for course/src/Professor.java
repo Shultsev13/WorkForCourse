@@ -5,13 +5,10 @@ public class Professor
 {
     private String name;
     private String surname;
-    private String discipline;
 
-    public Professor(String name, String surname, String discipline)
+    public Professor()
     {
-        this.name = name;
-        this.surname = surname;
-        this.discipline = discipline;
+
     }
 
     public String getName()
@@ -32,16 +29,6 @@ public class Professor
     public void setSurname(String surname)
     {
         this.surname = surname;
-    }
-
-    public String getDiscipline()
-    {
-        return discipline;
-    }
-
-    public void setDiscipline(String discipline)
-    {
-        this.discipline = discipline;
     }
 
     public String doRollCall(Group group)

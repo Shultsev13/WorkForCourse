@@ -7,16 +7,35 @@ public class Group
 {
     private ArrayList<Student> studentList = new ArrayList<>();
     private String name;
-    private int groupCounter = 0;
-    private final static int GROUP_SIZE = 30;
-//    private Student[] studentList = new Student[GROUP_SIZE];
+    private int groupSize = 0;
 
-    public Group(String name)
+
+    public Group()
+    {
+
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
     {
         this.name = name;
     }
 
-    public double getQuality()
+    public int getGroupSize()
+    {
+        return groupSize;
+    }
+
+    public void setGroupSize(int groupSize)
+    {
+        this.groupSize = groupSize;
+    }
+
+    public double getMaxQuality()
     {
         double max = 0;
         for (Student i : studentList)
@@ -45,15 +64,7 @@ public class Group
 
     public void addMember(Student student)
     {
-        if (groupCounter < GROUP_SIZE)
-        {
-            studentList.add(student);
-            groupCounter++;
-        }
-        else
-        {
-            System.out.println("Group is full!");
-        }
+        studentList.add(student);
     }
 
     public String getStudentList()

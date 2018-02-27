@@ -5,28 +5,27 @@ public class Student
 {
     private String name;
     private String surname;
-    private int studentID;
+    private static int studentID = 0;
     private double studentQuality;
     private boolean present = true;
 
 
-    public Student(String name, String surname, int studentID)
+    public Student()
+    {
+
+    }
+    public Student(String name, String surname)
     {
         this.name = name;
         this.surname = surname;
-        this.studentID = studentID;
-        this.studentQuality = (100.0 * Math.random());
-        this.present = this.studentQuality >= 60;
+        studentID++;
+        studentQuality = (100.0 * Math.random());
+        present = studentQuality >= 60;
     }
 
-    private int getStudentID()
+    public int getStudentID()
     {
         return studentID;
-    }
-
-    public void setStudentID(int studentID)
-    {
-        this.studentID = studentID;
     }
 
     private String getName()
@@ -34,19 +33,9 @@ public class Student
         return name;
     }
 
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
     private String getSurname()
     {
         return surname;
-    }
-
-    public void setSurname(String surname)
-    {
-        this.surname = surname;
     }
 
     public double getStudentQuality()
@@ -54,14 +43,9 @@ public class Student
         return studentQuality;
     }
 
-    public boolean isPresent()
+    private boolean isPresent()
     {
         return present;
-    }
-
-    public void setPresent(boolean present)
-    {
-        this.present = present;
     }
 
     @Override
