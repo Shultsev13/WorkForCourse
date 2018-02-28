@@ -50,11 +50,11 @@ public class Group
     public String getGroupMonitor(double max)
     {
         String groupMonitor = "";
-        for (Student i : studentList)
+        for (Student student : studentList)
         {
-            if (i.getStudentQuality() == max)
+            if (student.getStudentQuality() == max)
             {
-                groupMonitor += i;
+                groupMonitor += student.getFullName();
                 break;
             }
         }
@@ -68,11 +68,11 @@ public class Group
 
     public String getStudentList()
     {
-        String student = "";
-        for (Student i : studentList)
+        String list = "";
+        for (Student student : studentList)
         {
-            student += i + "\n";
+            list += student.getAllInfo() + "\n";
         }
-        return student;
+        return list;
     }
 }

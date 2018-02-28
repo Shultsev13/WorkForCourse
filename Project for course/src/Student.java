@@ -38,20 +38,24 @@ public class Student
         return surname;
     }
 
-    public double getStudentQuality()
-    {
-        return studentQuality;
-    }
-
     private boolean isPresent()
     {
         return present;
     }
 
-    @Override
-    public String toString()
+    public String getFullName()
+    {
+        return this.getName() + " " + this.getSurname();
+    }
+
+    public String getAllInfo()
     {
         return this.getStudentID() + ". " + this.getName() + " " + this.getSurname() + ". Is Present: " +
                 this.isPresent();
+    }
+
+    public double getStudentQuality()
+    {
+        return studentQuality;
     }
 }
