@@ -37,11 +37,11 @@ public class Group
     public double getMaxQuality()
     {
         double max = 0;
-        for (Student i : studentList)
+        for (Student student : studentList)
         {
-            if (max < i.getStudentQuality())
+            if (max < student.getStudentQuality())
             {
-                max = i.getStudentQuality();
+                max = student.getStudentQuality();
             }
         }
         return max;
