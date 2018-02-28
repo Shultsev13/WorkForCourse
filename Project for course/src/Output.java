@@ -97,8 +97,9 @@ public class Output
         }
         else if (intTemp == 2)
         {
-            System.out.println("Professor: " + professor.getName() + " " + professor.getSurname());
-            System.out.println("Group: " + group.getName());
+            System.out.println(
+                    "Professor " + professor.getName() + " " + professor.getSurname() + " do a roll call in group " +
+                            group.getName());
             System.out.println(professor.doRollCall(group));
             mainMenu();
         }
