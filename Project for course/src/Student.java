@@ -28,12 +28,12 @@ public class Student
         return studentID;
     }
 
-    public String getName()
+    private String getName()
     {
         return name;
     }
 
-    public String getSurname()
+    private String getSurname()
     {
         return surname;
     }
@@ -43,7 +43,7 @@ public class Student
         return studentQuality;
     }
 
-    public boolean isPresent()
+    private boolean isPresent()
     {
         return present;
     }
